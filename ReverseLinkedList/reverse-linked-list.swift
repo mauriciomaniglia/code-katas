@@ -1,5 +1,4 @@
-// Non optimal solution: Space O(n) Time O(n)
-// Iteratively approach
+// Iteratively approach: Time O(n)
 
 class Node<Value> {
     var value: Value
@@ -22,21 +21,21 @@ extension Node: CustomStringConvertible {
 }
 
 func revertLinkedList(_ node: Node<Int>) -> Node<Int> {
-    var revertList = Node(value: node.value)
-    var currentNode = node    
+    var prev: Node<Int>? 
+    var current = node    
     
-    while revertList != nil {
-        if let next = currentNode.next {
-            currentNode = next
-            let newNode = Node(value: next.value)
-            newNode.next = revertList
-            revertList = newNode
+    while current != nil { 
+        if let next = current.next {
+            current.next = prev
+            prev = current
+            current = next
         } else {
+            current.next = prev
             break
         }
     }
 
-    return revertList
+    return current
 }
 
 let node1 = Node(value: 1)
