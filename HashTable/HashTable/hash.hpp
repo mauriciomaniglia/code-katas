@@ -13,6 +13,11 @@
 #include <string>
 
 class hash {
+private:
+    int tableSize;
+
+public:
+    hash();
     int Hash(std::string key);
 };
 

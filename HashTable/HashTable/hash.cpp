@@ -10,6 +10,19 @@
 
 #include "hash.hpp"
 
+hash::hash() {
+    tableSize = 100;
+}
+
 int hash::Hash(std::string key) {
-    return 0;
+    int hash = 0;
+    int index;
+
+    for(int i = 0; i < key.length(); i++) {
+        hash = hash + (int)key[i];
+    }
+
+    index = hash / tableSize;
+
+    return index;
 }

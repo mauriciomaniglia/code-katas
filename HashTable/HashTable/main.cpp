@@ -10,7 +10,12 @@
 #include "hash.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int index;
+    hash customHash;
+
+    index = customHash.Hash("JohnJohn");
+
+    std::cout << "Index value: " << index << std::endl;
+
     return 0;
 }
