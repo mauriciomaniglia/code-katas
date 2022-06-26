@@ -11,7 +11,12 @@
 #include "hash.hpp"
 
 hash::hash() {
-    
+    for(int i = 0; i < tableSize; i++) {
+        HashTable[i] = new item;
+        HashTable[i]->name = "empty";
+        HashTable[i]->drink = "empty";
+        HashTable[i]->next = NULL;
+    }
 }
 
 int hash::Hash(std::string key) {
