@@ -53,3 +53,21 @@ void hash::AddItem(std::string name, std::string drink) {
         current->next = newItem;
     }
 }
+
+int hash::NumberOfItemsInIndex(int index) {
+    int count = 0;
+
+    if (HashTable[index]->name == "empty") {
+        return 0;
+    } else {
+        count++;
+
+        item* currentItem = HashTable[index];
+        while(currentItem->next != NULL) {
+            currentItem = currentItem->next;
+            count++;
+        }
+    }
+
+    return count;
+}
