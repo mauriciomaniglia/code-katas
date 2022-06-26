@@ -31,3 +31,25 @@ int hash::Hash(std::string key) {
 
     return index;
 }
+
+void hash::AddItem(std::string name, std::string drink) {
+    int index = Hash(name);
+
+    if (HashTable[index]->name == "empty") {
+        HashTable[index]->name = name;
+        HashTable[index]->drink = drink;
+        HashTable[index]->next = NULL;
+    } else {
+        item* newItem = new item;
+        newItem->name = name;
+        newItem->drink = drink;
+        newItem->next = NULL;
+
+        item* current = HashTable[index];
+        while(current->next != NULL) {
+            current = current->next;
+        }
+
+        current->next = newItem;
+    }
+}
