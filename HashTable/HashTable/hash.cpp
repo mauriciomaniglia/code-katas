@@ -11,7 +11,7 @@
 #include "hash.hpp"
 
 hash::hash() {
-    tableSize = 100;
+    
 }
 
 int hash::Hash(std::string key) {

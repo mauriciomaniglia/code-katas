@@ -14,7 +14,15 @@
 
 class hash {
 private:
-    int tableSize;
+    static const int tableSize = 10;
+
+    struct item {
+        std::string name;
+        std::string drink;
+        item* next;
+    };
+
+    item* HashTable[tableSize];
 
 public:
     hash();
