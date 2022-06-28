@@ -27,7 +27,7 @@ int hash::Hash(std::string key) {
         hash = hash + (int)key[i];
     }
 
-    index = hash / tableSize;
+    index = hash % tableSize;
 
     return index;
 }
