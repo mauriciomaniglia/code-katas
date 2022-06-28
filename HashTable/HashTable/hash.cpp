@@ -71,3 +71,17 @@ int hash::NumberOfItemsInIndex(int index) {
 
     return count;
 }
+
+void hash::PrintTable() {
+    int number;
+
+    for(int i = 0; i < tableSize; i++) {
+        number = NumberOfItemsInIndex(i);
+        std::cout << "-------------------------\n" << std::endl;
+        std::cout << "index = " << i << std::endl;
+        std::cout << HashTable[i]->name << std::endl;
+        std::cout << HashTable[i]->drink << std::endl;
+        std::cout << "# of items = " << number << std::endl;
+        std::cout << "-------------------------\n" << std::endl;
+    }
+}
