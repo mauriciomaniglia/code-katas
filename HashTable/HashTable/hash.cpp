@@ -85,3 +85,22 @@ void hash::PrintTable() {
         std::cout << "-------------------------\n" << std::endl;
     }
 }
+
+void hash::PrintItemsAtIndex(int index) {
+    item* currentItem = HashTable[index];
+
+    if (currentItem->name == "empty") {
+        std::cout << "Index " << index << " is empty" << std::endl;
+    } else {
+        std::cout << "Index " << index << " contains the following items" << std::endl;
+
+        while (currentItem != NULL) {
+            std::cout << "------------------------\n";
+            std::cout << currentItem->name << std::endl;
+            std::cout << currentItem->drink << std::endl;
+            std::cout << "------------------------\n";
+
+            currentItem = currentItem->next;
+        }
+    }
+}
