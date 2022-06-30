@@ -10,12 +10,30 @@
 #include "hash.hpp"
 
 int main(int argc, const char * argv[]) {
-    int index;
     hash customHash;
+    std::string name;
 
-    index = customHash.Hash("JohnJohn");
+    customHash.AddItem("Paul", "Locha");
+    customHash.AddItem("Kim", "Iced Locha");
+    customHash.AddItem("Emma", "Strawberry Smoothy");
+    customHash.AddItem("Annie", "Hot Chocolate");
+    customHash.AddItem("Sarah", "Passion Tea");
+    customHash.AddItem("Pepper", "Caramel Mocha");
+    customHash.AddItem("Mike", "Chai Tea");
+    customHash.AddItem("Steve", "Apple Cider");
+    customHash.AddItem("Bill", "Root Beer");
+    customHash.AddItem("Marie", "Skinny Latte");
+    customHash.AddItem("Susan", "Water");
+    customHash.AddItem("Joe", "Green Tea");
 
-    std::cout << "Index value: " << index << std::endl;
+    while (name != "Exit") {
+        std::cout << "Serach for ";
+        std::cin >> name;
+
+        if (name != "Exit") {
+            customHash.FindDrink(name);
+        }
+    }
 
     return 0;
 }
