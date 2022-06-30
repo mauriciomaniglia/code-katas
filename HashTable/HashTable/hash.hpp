@@ -32,6 +32,7 @@ public:
     void PrintTable();
     void PrintItemsAtIndex(int index);
     void FindDrink(std::string name);
+    void RemoveItem(std::string name);
 };
 
 #endif /* hash_hpp */

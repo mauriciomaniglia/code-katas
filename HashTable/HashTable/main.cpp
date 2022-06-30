@@ -26,12 +26,16 @@ int main(int argc, const char * argv[]) {
     customHash.AddItem("Susan", "Water");
     customHash.AddItem("Joe", "Green Tea");
 
+    customHash.PrintTable();
+
     while (name != "Exit") {
-        std::cout << "Serach for ";
+        std::cout << "Remove ";
         std::cin >> name;
 
         if (name != "Exit") {
-            customHash.FindDrink(name);
+            customHash.RemoveItem(name);
+
+            customHash.PrintTable();
         }
     }
 
