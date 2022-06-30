@@ -104,3 +104,25 @@ void hash::PrintItemsAtIndex(int index) {
         }
     }
 }
+
+void hash::FindDrink(std::string name) {
+    int index = Hash(name);
+    bool foundName = false;
+    std::string drink;
+
+    item* currentItem = HashTable[index];
+
+    while (currentItem != NULL) {
+        if (currentItem->name == name) {
+            foundName = true;
+            drink = currentItem->drink;
+        }
+        currentItem = currentItem->next;
+    }
+
+    if (foundName) {
+        std::cout << "Favorite drink: " << drink << std::endl;
+    } else {
+        std::cout << "not found\n";
+    }
+}

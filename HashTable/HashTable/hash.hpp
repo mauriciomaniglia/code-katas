@@ -31,6 +31,7 @@ public:
     int NumberOfItemsInIndex(int index);
     void PrintTable();
     void PrintItemsAtIndex(int index);
+    void FindDrink(std::string name);
 };
 
 #endif /* hash_hpp */
