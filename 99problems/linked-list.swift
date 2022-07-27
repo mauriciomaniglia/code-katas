@@ -54,10 +54,34 @@ extension List {
 
         return nil
     }
+    
+    // Find the number of elements of a linked list.
+    
+    var length: Int {
+        var total = 0
+        var currentList: List<T>? = self
+        
+        while(currentList != nil) {
+            total += 1
+            currentList = currentList?.next
+        }
+        
+        return total
+    }
+    
+    // Reverse a linked list.
+    
+    func reverse() {
+        var next: List<T>? = nil
+        var current: List<T>? = self
+        var previous: List<T>? = nil
+        
+        while (current != nil) {
+            next = current?.next
+            previous = current
+            current = next
+        }
+    }
 }
 
-//print(List(1, 1, 2, 3, 5, 8)?.last as Any)
-//print(List(1, 1, 2, 3, 5, 8)?.pennultimate as Any)
-
-let list = List(1, 1, 2, 3, 5, 8)
-print(list?[5])
+let list = List(1, 2, 3, 4, 5, 6)!
