@@ -57,3 +57,38 @@ solution1.maxProfit([7,1,5,3,6,4])
 solution1.maxProfit([7,1,5,3,8,4])
 solution1.maxProfit([7,2,5,3,9,4])
 solution1.maxProfit([7,6,4,3,1])
+
+
+
+/*
+ Solution2
+ 
+ Time: O(n^2)
+ Space: O(1)
+ */
+class Solution2 {
+    func maxProfit(_ prices: [Int]) -> Int {
+        var maxProfit = 0
+        
+        for (i, iv) in prices.enumerated() {
+            for (j, jv) in prices.enumerated() {
+                if j <= i { continue }
+                
+                let profit = jv - iv
+                
+                if profit > maxProfit {
+                    maxProfit = profit
+                }
+            }
+        }
+        
+        return maxProfit
+    }
+}
+
+let solution2 = Solution2()
+solution2.maxProfit([7,1,5,3,6,4])
+solution2.maxProfit([7,1,5,3,8,4])
+solution2.maxProfit([7,2,5,3,9,4])
+solution2.maxProfit([7,6,4,3,1])
+
