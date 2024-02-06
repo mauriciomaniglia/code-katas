@@ -33,22 +33,29 @@ import Cocoa
  */
 class Solution1 {
     func maxProfit(_ prices: [Int]) -> Int {
-        var maxProfitValue = 0
-        var startIndex = 0
-        var endIndex = prices.count-1
-        
-        while startIndex < endIndex {
-            let profit = prices[endIndex] - prices[startIndex]
-            
-            if profit > maxProfitValue {
-                maxProfitValue = profit
+        guard prices.count >= 2 else { return 0 }
+
+        var maxProfit = 0
+        var leftPointer = 0
+        var rightPointer = 1
+
+        while rightPointer < prices.count {
+            let leftValue = prices[leftPointer]
+            let rightValue = prices[rightPointer]
+            let currentProfit = prices[rightPointer] - prices[leftPointer]
+
+            if leftValue > rightValue {
+                leftPointer = rightPointer
             }
-            
-            startIndex += 1
-            endIndex -= 1
+
+            if currentProfit > maxProfit {
+                maxProfit = currentProfit
+            }
+
+            rightPointer += 1
         }
-        
-        return maxProfitValue
+
+        return maxProfit
     }
 }
 
