@@ -52,8 +52,9 @@ class Solution {
 }
 
 let solution = Solution()
-solution.climbStairs(2)
-solution.climbStairs(3)
-solution.climbStairs(4)
-solution.climbStairs(5)
-solution.climbStairs(6)
+print(solution.climbStairs(2))
+print(solution.climbStairs(3))
+print(solution.climbStairs(4))
+print(solution.climbStairs(5))
+print(solution.climbStairs(6))
+
