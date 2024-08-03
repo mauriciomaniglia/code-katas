@@ -93,3 +93,4 @@ solution2.isAnagram("car", "rat")
 solution2.isAnagram("silent", "listen")
 solution2.isAnagram("heart", "earth")
 solution2.isAnagram("race", "reck")
+
