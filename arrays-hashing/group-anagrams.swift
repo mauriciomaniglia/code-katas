@@ -59,3 +59,4 @@ let solution1 = Solution1()
 solution1.groupAnagrams(["eat","tea","tan","ate","nat","bat"])
 solution1.groupAnagrams([""])
 solution1.groupAnagrams(["a"])
+
