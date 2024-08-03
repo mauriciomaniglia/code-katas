@@ -65,3 +65,4 @@ solution1.topKFrequent([1,1,1,2,2,3], 2)
 solution1.topKFrequent([1,1,1,2,2,3,3,3,3,4,4], 2)
 solution1.topKFrequent([1,1,1,2,2,3,3,3,3,4,4], 3)
 solution1.topKFrequent([1], 1)
+
