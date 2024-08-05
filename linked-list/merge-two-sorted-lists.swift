@@ -85,3 +85,4 @@ let solution = Solution()
 let merge = solution.mergeTwoLists(a1, b1)
 
 printList(merge)
+
