@@ -64,3 +64,4 @@ let node1 = ListNode(1, node2)
 
 let solution = Solution()
 solution.reverseList(node1)
+
