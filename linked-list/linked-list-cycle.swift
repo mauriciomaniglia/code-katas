@@ -84,3 +84,4 @@ node1.next = node2
 
 let solution1 = Solution1()
 solution1.hasCycle(node1)
+
