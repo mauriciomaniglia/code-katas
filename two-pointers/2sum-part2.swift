@@ -83,3 +83,4 @@ let solution2 = Solution2()
 solution2.twoSum([2,7,11,15], 9)
 solution2.twoSum([2,3,4], 6)
 solution2.twoSum([-1, 0], -1)
+
