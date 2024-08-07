@@ -109,3 +109,4 @@ let solution2 = Solution2()
 solution2.isPalindrome("A man, a plan, a canal: Panama")
 solution2.isPalindrome("race a car")
 solution2.isPalindrome(" ")
+
