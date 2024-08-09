@@ -101,3 +101,4 @@ let root = TreeNode(4, node3, node6)
 
 let solution = Solution()
 solution.levelOrder(root)
+
