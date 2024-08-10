@@ -102,3 +102,4 @@ let root = TreeNode(6, node5, node8)
 
 let solution = Solution()
 solution.lowestCommonAncestor(root, node5, node3)
+
