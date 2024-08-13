@@ -85,3 +85,4 @@ let root2 = TreeNode(4, node3, node6)
 
 let solution = Solution()
 solution.isSameTree(root1, root2)
+
