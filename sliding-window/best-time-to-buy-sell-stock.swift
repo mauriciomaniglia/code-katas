@@ -99,3 +99,4 @@ solution2.maxProfit([7,1,5,3,8,4])
 solution2.maxProfit([7,2,5,3,9,4])
 solution2.maxProfit([7,6,4,3,1])
 
+
