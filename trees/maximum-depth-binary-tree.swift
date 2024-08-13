@@ -105,3 +105,4 @@ let root = TreeNode(4, node3, node6)
 
 let solution2 = Solution2()
 solution2.maxDepth(root)
+
