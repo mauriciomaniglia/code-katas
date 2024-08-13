@@ -89,3 +89,4 @@ let solution2 = Solution2()
 solution2.lengthOfLongestSubstring("abcabcbb")
 solution2.lengthOfLongestSubstring("bbbbb")
 solution2.lengthOfLongestSubstring("pwwkew")
+
