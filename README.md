@@ -1,2 +1,2 @@
 # code-kata
-Exercises to improve my coding skills. 
+Exercises to improve my problem-solving skills. 
