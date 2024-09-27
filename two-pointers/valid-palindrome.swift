@@ -25,88 +25,27 @@ import Cocoa
  */
 
 
+func isPalindrome(_ s: String) -> Bool {
+    let filteredString = s.lowercased().filter { $0.isLetter }
+    var left = 0
+    var right = filteredString.count - 1
+    let characters = Array(filteredString)
 
-/*
- Solution1
- 
- Time: O(n)
- Space: O(n)
- */
-
-class Solution1 {
-    func isPalindrome(_ s: String) -> Bool {
-        var formattedString: [String] = []
-        
-        for l in s {
-            if l.isLetter {
-                formattedString.append(l.lowercased())
-            }
+    while left < right {
+        if characters[left] != characters[right] {
+            return false
         }
-        
-        if formattedString.count == 0 { return true }
-
-        var endPointer = formattedString.count - 1
-        var startPointer = 0
-        
-        while(startPointer != endPointer) {
-
-            if formattedString[startPointer] != formattedString[endPointer] {
-                return false
-            }
-            
-            startPointer += 1
-            endPointer -= 1
-        }
-        
-        return true
+        left += 1
+        right -= 1
     }
+
+    return true
 }
 
-let solution1 = Solution1()
-solution1.isPalindrome("A man, a plan, a canal: Panama")
-solution1.isPalindrome("race a car")
-solution1.isPalindrome(" ")
+let input1 = "A man, a plan, a canal: Panama"
+let input2 = "race a car"
+let input3 = " "
 
-
-
-/*
- Solution2
- 
- Time: O(n)
- Space: O(1)
- */
-
-class Solution2 {
-    func isPalindrome(_ s: String) -> Bool {
-        var startPointer = 0
-        var endPointer = s.count - 1
-        
-        while startPointer != endPointer {
-            let startIndex = String.Index(utf16Offset: startPointer, in:s)
-            let endIndex =  String.Index(utf16Offset: endPointer, in:s)
-            
-            if s[startIndex].isLetter == false {
-                startPointer += 1
-                continue
-            }
-            
-            if s[endIndex].isLetter == false {
-                endPointer -= 1
-                continue
-            }
-            
-            if s[startIndex].lowercased() != s[endIndex].lowercased() { return false }
-            
-            startPointer += 1
-            endPointer -= 1
-        }
-        
-        return true
-    }
-}
-
-let solution2 = Solution2()
-solution2.isPalindrome("A man, a plan, a canal: Panama")
-solution2.isPalindrome("race a car")
-solution2.isPalindrome(" ")
-
+print(isPalindrome(input1))
+print(isPalindrome(input2))
+print(isPalindrome(input3))
