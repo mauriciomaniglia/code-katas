@@ -30,10 +30,16 @@ class List<T> {
     }
 
     var last: T? {
-        return nil
+        if nextItem == nil {
+            return value
+        } else {
+            return nextItem?.last
+        }
     }
 }
 
+let list = List(1, 1, 2, 3, 5, 8)
+print(list?.last ?? -1)
 
 
 
