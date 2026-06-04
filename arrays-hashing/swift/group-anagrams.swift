@@ -45,18 +45,12 @@ class Solution1 {
             }
         }
         
-        var anagrams: [[String]] = []
-        
-        for i in group.values {
-            anagrams.append(i)
-        }
-        
-        return anagrams
+        return Array(group.values)    
     }
 }
 
 let solution1 = Solution1()
-solution1.groupAnagrams(["eat","tea","tan","ate","nat","bat"])
+print(solution1.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
 solution1.groupAnagrams([""])
 solution1.groupAnagrams(["a"])
 
