@@ -20,8 +20,6 @@ import Cocoa
  */
 
 
-
-
 /*
  Solution1
  
@@ -42,12 +40,6 @@ class Solution1 {
         return false
     }
 }
-
-let solution1 = Solution1()
-solution1.containsDuplicate([1,2,3,1])
-solution1.containsDuplicate([1,2,3,4])
-solution1.containsDuplicate([1,1,1,3,3,4,3,2,4,2])
-
 
 /*
  Solution2
@@ -73,8 +65,15 @@ class Solution2 {
     }
 }
 
-let solution2 = Solution2()
-solution2.containsDuplicate([1,2,3,1])
-solution2.containsDuplicate([1,2,3,4])
-solution2.containsDuplicate([1,1,1,3,3,4,3,2,4,2])
+/*
+ Solution 3
 
+ Time: O(n)
+ Space: O(n)
+*/
+
+class Solution3 {
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        nums.count != Set(nums).count
+    }
+}
