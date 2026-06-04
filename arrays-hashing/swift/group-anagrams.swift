@@ -24,10 +24,12 @@ import Cocoa
 
 
 /*
- Solution1
- 
- Time: O(n)
- Space: O(n)
+ Solution1/Solution2
+
+ Time Complexity: O(N⋅KlogK), where N is the number of strings and K is the maximum length of a string. 
+ Sorting each string takes O(KlogK).
+
+ Space Complexity: O(N⋅K) to store the strings inside the dictionary.
  */
 
 class Solution1 {
@@ -49,8 +51,22 @@ class Solution1 {
     }
 }
 
+class Solution2 {
+    func groupAnagrams(_ strs: [String]) -> [[String]] {
+        var anagramMap = [String: [String]]()
+
+        for str in strs {
+            let sortedKey = String(str.sorted())
+
+            anagramMap[sortedKey, default: []].append(str)
+        }
+
+        return Array(anagramMap.values)
+    }
+}
+
 let solution1 = Solution1()
-print(solution1.groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+solution1.groupAnagrams(["eat","tea","tan","ate","nat","bat"])
 solution1.groupAnagrams([""])
 solution1.groupAnagrams(["a"])
 
